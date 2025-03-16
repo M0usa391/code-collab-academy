@@ -17,7 +17,7 @@ export const supabase = createClient<Database>(
     },
     // تمكين التخزين المؤقت للاستعلامات المتكررة
     global: {
-      fetch: (...args) => fetch(...args)
+      fetch: (url: string, options: RequestInit) => fetch(url, options)
     }
   }
 );
